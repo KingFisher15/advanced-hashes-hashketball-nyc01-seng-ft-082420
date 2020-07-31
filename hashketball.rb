@@ -222,7 +222,7 @@ def most_points_scored
 end
 
 def winning_team
-  
+
   scores = { 'Brooklyn Nets' => 0, 'Charlotte Hornets' => 0 }
 
   game_hash.each do |_team, game_data|
