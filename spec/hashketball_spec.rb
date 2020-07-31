@@ -74,7 +74,7 @@ describe 'hashketball' do
     end
 
     it 'returns the correct player data for the :away team' do
-      away_players = [jeff_adrien, bismack_biyombo, desagna_diop, ben_gordon, kemba_walker]
+      away_players = [ bismack_biyombo, desagna_diop, ben_gordon, kemba_walker]
       names = game_hash[:away][:players].map {|player| player[:player_name]}
 
       away_players.each do |example_player_hash|
