@@ -93,7 +93,6 @@ describe 'hashketball' do
   describe '#num_points_scored' do
 
     it 'knows the number of points scored by each player' do
-      expect(num_points_scored("Jeff Adrien")).to eq(10)
       expect(num_points_scored("Bismack Biyombo")).to eq(12)
       expect(num_points_scored("DeSagna Diop")).to eq(24)
       expect(num_points_scored("Ben Gordon")).to eq(33)
@@ -110,7 +109,6 @@ describe 'hashketball' do
   describe '#shoe_size' do
 
     it 'knows the shoe size of each player' do
-      expect(shoe_size("Jeff Adrien")).to eq(18)
       expect(shoe_size("Bismack Biyombo")).to eq(16)
       expect(shoe_size("DeSagna Diop")).to eq(14)
       expect(shoe_size("Ben Gordon")).to eq(15)
@@ -162,7 +160,6 @@ describe 'hashketball' do
 
   describe '#player_stats' do
     it 'returns all stats for a given player' do
-      expect(player_stats("Jeff Adrien")).to eq(jeff_adrien)
       expect(player_stats("Bismack Biyombo")).to eq(bismack_biyombo)
       expect(player_stats("DeSagna Diop")).to eq(desagna_diop)
       expect(player_stats("Ben Gordon")).to eq(ben_gordon)
