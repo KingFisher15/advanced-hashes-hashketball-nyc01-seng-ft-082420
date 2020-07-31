@@ -5,8 +5,15 @@ def game_hash
     away: { team_name: 'Charlotte Hornets',
             colors: %w[Turquoise Purple],
             players: [
-              { :player_name => "Jeff Adrien", :number => 4, :shoe => 18, :points => 10, :rebounds => 1, :assists => 1, :steals => 2, :blocks => 7, :slam_dunks => 2 }
-            ],
+              { player_name: 'Jeff Adrien',
+                number: 4,
+                shoe: 18,
+                points: 10,
+                rebounds: 1,
+                assists: 1,
+                steals: 2,
+                blocks: 7,
+                slam_dunks: 2 },
               { player_name: 'Bismack Biyombo',
                 number: 0,
                 shoe: 16,
@@ -15,7 +22,7 @@ def game_hash
                 assists: 7,
                 steals: 22,
                 blocks: 15,
-                slam_dunks: 10},
+                slam_dunks: 10 },
               { player_name: 'DeSagna Diop',
                 number: 2,
                 shoe: 14,
@@ -95,7 +102,7 @@ def game_hash
             ] }
   }
 end
-end
+
 def num_points_scored(sought_player_name)
   game_hash.each do |_place, team|
     team.each do |attribute, data|
@@ -222,6 +229,9 @@ def most_points_scored
 end
 
 def winning_team
+  # Set up a hash to keep track of the points scored by each team. This way, we
+  # can iterate through each player, get their points scored, and increase the
+  # count in the hash.
 
   scores = { 'Brooklyn Nets' => 0, 'Charlotte Hornets' => 0 }
 
