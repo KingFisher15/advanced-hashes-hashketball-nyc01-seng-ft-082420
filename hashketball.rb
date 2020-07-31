@@ -165,12 +165,11 @@ def player_stats(sought_player_name)
         next unless player[:player_name] == sought_player_name
 
         new_hash = player.delete_if do |k, _v|
-          k = :player_name
+          k == :player_name
         end
       end
     end
   end
-  new_hash
 end
 
 def big_shoe_rebounds
